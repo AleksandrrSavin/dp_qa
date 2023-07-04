@@ -19,24 +19,34 @@
 ### Отчет Allure c подключенным MySQL
 Overview Report
 
-![Overview report mySQL](https://cloud.mail.ru/public/ujg4/M8cbxpUb1)
+![Overview report mySQL](![Screenshot_1](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/89963f2e-49af-4460-9d3d-32fce07f80da)
+)
 
 Suite CreditTest Report  
-![Suites Credit report MySQL](https://cloud.mail.ru/public/fnxW/yBgYFXANw)
-![Suites Credit report MySQL](https://cloud.mail.ru/public/1CSH/bHa7QMHt3)
+![Suites Credit report MySQL](![Screenshot_2](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/d4b6ac18-a855-4926-94c0-381ea58ac57d)
+)
+![Suites Credit report MySQL](![Screenshot_3](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/317f6dd0-00b6-4db2-9554-087d5fc075a2)
+)
 
 Suite PaymentTest Report
-![Suites Payment report mySQL](https://cloud.mail.ru/public/VFcz/macuX3gRE)
-![Suites Payment report mySQL](https://cloud.mail.ru/public/cLHT/n1rXqD5wZ)
+![Suites Payment report mySQL](![Screenshot_4](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/68643572-dd6e-4705-b3e7-9f4957dd8810)
+)
+![Suites Payment report mySQL](![Screenshot_5](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/3d02a830-4fe8-448d-9d43-c016b174de5f)
+)
 
 ### Отчет Allure c подключенным PostgreSQL
 Overview Report
-![Overview report PostgreSQL](https://cloud.mail.ru/public/KbED/7STRTFKhy)
+![Overview report PostgreSQL](![Screenshot_0](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/9e7ff787-ffe4-4a7a-9f08-a73a86aa745d)
+)
 
 Suite CreditTest Report
-![Suites Credit report PostgreSQL](https://cloud.mail.ru/public/BoJz/SjbGRCXo6)
-![Suites Credit report PostgreSQL](https://cloud.mail.ru/public/SVZo/KWZNopdJZ)
+![Suites Credit report PostgreSQL](![Screenshot_1](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/5c06d72a-49d4-428d-ab76-c39b053ebd7d)
+)
+![Suites Credit report PostgreSQL](![Screenshot_2](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/1d7790b0-e87d-4f12-a3a2-0376bf96dd61)
+)
 
 Suite PaymentTest Report
-![Suites Payment report PostgreSQL](https://cloud.mail.ru/public/pbLG/U6NAYJ7sa)
-![Suites Payment report PostgreSQL](https://cloud.mail.ru/public/pbLG/U6NAYJ7sa)
+![Suites Payment report PostgreSQL](![Screenshot_3](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/8817c531-9065-4fa6-b418-7dbc7acaf8f3)
+)
+![Suites Payment report PostgreSQL](![Screenshot_4](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/f40ee63d-0c14-49a7-95f4-e3dd1d092f3f)
+)
