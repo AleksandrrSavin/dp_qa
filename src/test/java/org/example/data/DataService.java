@@ -7,8 +7,8 @@ import java.util.*;
 import static java.lang.String.valueOf;
 
 public class DataService {
-    static String[] name = {"Pavel", "George","Aleksandr", "Boris", "Olga", "Nikolay"};
-    static String[] surname = {"Ivanov", "Petroff", "Levenguk", "Abcdefghijklmnopqrstuvwxyz"};
+    static String[] name = {"Alena", "John","Aleksandr", "Ivan", "Maria", "Nikolay"};
+    static String[] surname = {"Kirkorov", "Parcker", "Ivanov", "Abcdefghijklmnopqrstuvwxyz"};
     static String[] namesNegative = {"Иван", "ἱερογλύφος", "中国大使馆的招待会", "الناس" };
     static String[] surnameNegative = {"Иванов", "γλύἱρος", "食物短缺促使价格上涨", "راراأ"};
     static String[] approvedCardNumber = {"4444444444444441"};
