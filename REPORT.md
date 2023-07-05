@@ -23,30 +23,30 @@ Overview Report
 
 
 Suite CreditTest Report  
-![Suites Credit report MySQL](![Screenshot_2](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/d4b6ac18-a855-4926-94c0-381ea58ac57d)
-)
-![Suites Credit report MySQL](![Screenshot_3](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/317f6dd0-00b6-4db2-9554-087d5fc075a2)
-)
+![Suites Credit report MySQL](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/d4b6ac18-a855-4926-94c0-381ea58ac57d)
+
+![Suites Credit report MySQL](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/317f6dd0-00b6-4db2-9554-087d5fc075a2)
+
 
 Suite PaymentTest Report
-![Suites Payment report mySQL](![Screenshot_4](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/68643572-dd6e-4705-b3e7-9f4957dd8810)
-)
-![Suites Payment report mySQL](![Screenshot_5](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/3d02a830-4fe8-448d-9d43-c016b174de5f)
-)
+![Suites Payment report mySQL](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/68643572-dd6e-4705-b3e7-9f4957dd8810)
+
+![Suites Payment report mySQL](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/3d02a830-4fe8-448d-9d43-c016b174de5f)
+
 
 ### Отчет Allure c подключенным PostgreSQL
 Overview Report
-![Overview report PostgreSQL](![Screenshot_0](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/9e7ff787-ffe4-4a7a-9f08-a73a86aa745d)
-)
+![Overview report PostgreSQL](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/9e7ff787-ffe4-4a7a-9f08-a73a86aa745d)
+
 
 Suite CreditTest Report
-![Suites Credit report PostgreSQL](![Screenshot_1](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/5c06d72a-49d4-428d-ab76-c39b053ebd7d)
-)
-![Suites Credit report PostgreSQL](![Screenshot_2](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/1d7790b0-e87d-4f12-a3a2-0376bf96dd61)
-)
+![Suites Credit report PostgreSQL](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/5c06d72a-49d4-428d-ab76-c39b053ebd7d)
+
+![Suites Credit report PostgreSQL](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/1d7790b0-e87d-4f12-a3a2-0376bf96dd61)
+
 
 Suite PaymentTest Report
-![Suites Payment report PostgreSQL](![Screenshot_3](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/8817c531-9065-4fa6-b418-7dbc7acaf8f3)
-)
-![Suites Payment report PostgreSQL](![Screenshot_4](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/f40ee63d-0c14-49a7-95f4-e3dd1d092f3f)
-)
+![Suites Payment report PostgreSQL](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/8817c531-9065-4fa6-b418-7dbc7acaf8f3)
+
+![Suites Payment report PostgreSQL](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/f40ee63d-0c14-49a7-95f4-e3dd1d092f3f)
+
