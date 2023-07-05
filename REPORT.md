@@ -19,8 +19,8 @@
 ### Отчет Allure c подключенным MySQL
 Overview Report
 
-![Overview report mySQL](![Screenshot_1](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/89963f2e-49af-4460-9d3d-32fce07f80da)
-)
+![Overview report mySQL](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/89963f2e-49af-4460-9d3d-32fce07f80da)
+
 
 Suite CreditTest Report  
 ![Suites Credit report MySQL](![Screenshot_2](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/d4b6ac18-a855-4926-94c0-381ea58ac57d)
