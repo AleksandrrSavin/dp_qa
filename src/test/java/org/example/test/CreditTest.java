@@ -1,5 +1,6 @@
 package org.example.test;
 
+import lombok.SneakyThrows;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
@@ -25,10 +26,8 @@ public class CreditTest {
     }
 
     @AfterAll
-    static void tearDown() {
+    static void tearDownSqlClean() {
         SelenideLogger.removeListener("allure");
-    }
-    static void sqlClean() throws SQLException {
         SQLService.clear();
     }
 
@@ -38,7 +37,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.approvedCardNumber(), DataService.thisMonth(), DataService.year(), DataService.cardHolder(), DataService.cvv());
         page.buttonContinue();
-        page.success();
+        page.waitSuccessfulNotification();
     }
 
 
@@ -48,7 +47,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.declinedCardNumber(), DataService.thisMonth(), DataService.year(), DataService.cardHolder(), DataService.cvv());
         page.buttonContinue();
-        page.error();
+        page.waitErrorNotification();
     }
 
 
@@ -58,7 +57,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.randomCardNumber(), DataService.month(), DataService.year(), DataService.cardHolder(), DataService.cvv());
         page.buttonContinue();
-        page.error();
+        page.waitErrorNotification();
     }
 
 
@@ -68,7 +67,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.randomDigit(), DataService.month(), DataService.year(), DataService.cardHolder(), DataService.cvv());
         page.buttonContinue();
-        page.invalidFormat();
+        page.waitWrongFormatError();
     }
 
 
@@ -78,7 +77,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.fifteenCardNumber(), DataService.month(), DataService.year(), DataService.cardHolder(), DataService.cvv());
         page.buttonContinue();
-        page.invalidFormat();
+        page.waitWrongFormatError();
     }
 
 
@@ -88,7 +87,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.seventeenCardNumber(), DataService.month(), DataService.year(), DataService.cardHolder(), DataService.cvv());
         page.buttonContinue();
-        page.error();
+        page.waitErrorNotification();
     }
 
 
@@ -98,7 +97,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.lettersNumber(), DataService.month(), DataService.year(), DataService.cardHolder(), DataService.cvv());
         page.buttonContinue();
-        page.invalidFormat();
+        page.waitWrongFormatError();
     }
 
 
@@ -110,7 +109,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.getSymbolsNumber(), DataService.month(), DataService.year(), DataService.cardHolder(), DataService.cvv());
         page.buttonContinue();
-        page.invalidFormat();
+        page.waitWrongFormatError();
     }
 
 
@@ -120,7 +119,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.emptySymbol(), DataService.month(), DataService.year(), DataService.cardHolder(), DataService.cvv());
         page.buttonContinue();
-        page.invalidFormat();
+        page.waitWrongFormatError();
     }
 
 
@@ -130,7 +129,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.approvedCardNumber(), DataService.zeroMonthorYear(), DataService.year(), DataService.cardHolder(), DataService.cvv());
         page.buttonContinue();
-        page.invalidFormat();
+        page.waitWrongFormatError();
     }
 
 
@@ -140,7 +139,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.approvedCardNumber(), DataService.thirteenMonth(), DataService.year(), DataService.cardHolder(), DataService.cvv());
         page.buttonContinue();
-        page.invalidDate();
+        page.waitCardExpirationDateError();
     }
 
     @Test
@@ -149,7 +148,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.approvedCardNumber(), DataService.lastMonth(), DataService.thisYear(), DataService.cardHolder(), DataService.cvv());
         page.buttonContinue();
-        page.invalidDate();
+        page.waitCardExpirationDateError();
     }
 
 
@@ -159,7 +158,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.approvedCardNumber(), DataService.twoLetters(), DataService.year(), DataService.cardHolder(), DataService.cvv());
         page.buttonContinue();
-        page.invalidFormat();
+        page.waitWrongFormatError();
     }
 
 
@@ -169,7 +168,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.approvedCardNumber(), DataService.randomDigit(), DataService.year(), DataService.cardHolder(), DataService.cvv());
         page.buttonContinue();
-        page.invalidFormat();
+        page.waitWrongFormatError();
     }
 
     @Test
@@ -178,7 +177,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.approvedCardNumber(), DataService.emptySymbol(), DataService.year(), DataService.cardHolder(), DataService.cvv());
         page.buttonContinue();
-        page.invalidFormat();
+        page.waitWrongFormatError();
     }
 
 
@@ -188,7 +187,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.approvedCardNumber(), DataService.month(), DataService.zeroMonthorYear(), DataService.cardHolder(), DataService.cvv());
         page.buttonContinue();
-        page.expiredCard();
+        page.waitCardExpiredError();
     }
 
 
@@ -198,7 +197,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.approvedCardNumber(), DataService.month(), DataService.pastYear(), DataService.cardHolder(), DataService.cvv());
         page.buttonContinue();
-        page.expiredCard();
+        page.waitCardExpiredError();
     }
 
     @Test
@@ -207,7 +206,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.approvedCardNumber(), DataService.month(), DataService.moreFiveYear(), DataService.cardHolder(), DataService.cvv());
         page.buttonContinue();
-        page.invalidDate();
+        page.waitCardExpirationDateError();
     }
 
 
@@ -217,7 +216,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.approvedCardNumber(), DataService.month(), DataService.twoLetters(), DataService.cardHolder(), DataService.cvv());
         page.buttonContinue();
-        page.invalidFormat();
+        page.waitWrongFormatError();
     }
 
 
@@ -227,7 +226,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.approvedCardNumber(), DataService.month(), DataService.randomDigit(), DataService.cardHolder(), DataService.cvv());
         page.buttonContinue();
-        page.invalidFormat();
+        page.waitWrongFormatError();
     }
 
 
@@ -237,7 +236,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.approvedCardNumber(), DataService.month(), DataService.emptySymbol(), DataService.cardHolder(), DataService.cvv());
         page.buttonContinue();
-        page.invalidFormat();
+        page.waitWrongFormatError();
     }
 
 
@@ -247,7 +246,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.approvedCardNumber(), DataService.month(), DataService.symbolYear(), DataService.cardHolder(), DataService.cvv());
         page.buttonContinue();
-        page.invalidFormat();
+        page.waitWrongFormatError();
     }
 
 
@@ -257,7 +256,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.approvedCardNumber(), DataService.month(), DataService.year(), DataService.onlyNameCardHolder(), DataService.cvv());
         page.buttonContinue();
-        page.invalidFormat();
+        page.waitWrongFormatError();
     }
 
 
@@ -267,7 +266,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.approvedCardNumber(), DataService.month(), DataService.year(), DataService.threeWordCardHolder(), DataService.cvv());
         page.buttonContinue();
-        page.invalidFormat();
+        page.waitWrongFormatError();
     }
 
 
@@ -277,7 +276,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.approvedCardNumber(), DataService.month(), DataService.year(), DataService.negativeCardHolder(), DataService.cvv());
         page.buttonContinue();
-        page.error();
+        page.waitErrorNotification();
     }
 
 
@@ -287,7 +286,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.approvedCardNumber(), DataService.month(), DataService.year(), DataService.numbersCardHolder(), DataService.cvv());
         page.buttonContinue();
-        page.error();
+        page.waitErrorNotification();
     }
 
 
@@ -297,7 +296,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.approvedCardNumber(), DataService.month(), DataService.year(), DataService.symbolCardHolder(), DataService.cvv());
         page.buttonContinue();
-        page.error();
+        page.waitErrorNotification();
     }
 
 
@@ -307,7 +306,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.approvedCardNumber(), DataService.month(), DataService.year(), DataService.emptySymbol(), DataService.cvv());
         page.buttonContinue();
-        page.required();
+        page.waitRequiredFieldError();
     }
 
 
@@ -317,7 +316,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.approvedCardNumber(), DataService.month(), DataService.year(), DataService.overLimitCardHolder(), DataService.cvv());
         page.buttonContinue();
-        page.invalidFormat();
+        page.waitWrongFormatError();
     }
 
 
@@ -328,7 +327,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.approvedCardNumber(), DataService.month(), DataService.year(), DataService.cardHolder(), DataService.oneOrTwoSymbolsCVV());
         page.buttonContinue();
-        page.invalidFormat();
+        page.waitWrongFormatError();
     }
 
 
@@ -338,7 +337,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.approvedCardNumber(), DataService.month(), DataService.year(), DataService.cardHolder(), DataService.lettersOnCVV());
         page.buttonContinue();
-        page.invalidFormat();
+        page.waitWrongFormatError();
     }
 
 
@@ -348,7 +347,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.approvedCardNumber(), DataService.month(), DataService.year(), DataService.cardHolder(), DataService.symbolCVV());
         page.buttonContinue();
-        page.invalidFormat();
+        page.waitWrongFormatError();
     }
 
     @Test
@@ -357,7 +356,7 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.approvedCardNumber(), DataService.month(), DataService.year(), DataService.cardHolder(), DataService.emptySymbol());
         page.buttonContinue();
-        page.required();
+        page.waitRequiredFieldError();
     }
 
     @Test
@@ -366,12 +365,13 @@ public class CreditTest {
         page.buyCredit();
         page.Card(DataService.approvedCardNumber(), DataService.thisMonth(), DataService.year(), DataService.cardHolder(), DataService.zeroCvv());
         page.buttonContinue();
-        page.success();
+        page.waitSuccessfulNotification();
     }
 
     @Test
+    @SneakyThrows
     @DisplayName("Покупка в кредит с активной карты, регистрация записи в БД")
-    void successfulCreditApprovedCardCreditWithDBCheck() throws SQLException, InterruptedException {
+    void successfulCreditApprovedCardCreditWithDBCheck() {
         page.buyCredit();
         page.Card(DataService.approvedCardNumber(), DataService.thisMonth(), DataService.year(), DataService.cardHolder(), DataService.cvv());
         page.buttonContinue();
@@ -381,8 +381,9 @@ public class CreditTest {
 
 
     @Test
+    @SneakyThrows
     @DisplayName("Покупка в кредит с заблокированной карты, регистрация записи в БД")
-    void unsuccessfulCreditDeclinedCardCreditWithDBCheck() throws SQLException, InterruptedException {
+    void unsuccessfulCreditDeclinedCardCreditWithDBCheck() {
         page.buyCredit();
         page.Card(DataService.declinedCardNumber(), DataService.thisMonth(), DataService.year(), DataService.cardHolder(), DataService.cvv());
         page.buttonContinue();

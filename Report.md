@@ -19,36 +19,36 @@
 ### Отчет Allure c подключенным MySQL
 Overview Report
 
-![Overview report mySQL](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/89963f2e-49af-4460-9d3d-32fce07f80da)
+![Overview report mySQL](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/3860dce1-62be-4579-b1ea-a8388e5859ef)
 
 
 Suite CreditTest Report  
-![Suites Credit report MySQL](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/d4b6ac18-a855-4926-94c0-381ea58ac57d)
+![Suites Credit report MySQL](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/319cf7ad-f5ad-42db-91d5-a1a7ca8ce91a)
 
-![Suites Credit report MySQL](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/317f6dd0-00b6-4db2-9554-087d5fc075a2)
+![Suites Credit report MySQL](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/a22b9d25-51cd-46ad-9921-502bccc76d7b)
 
 
 Suite PaymentTest Report
-![Suites Payment report mySQL](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/68643572-dd6e-4705-b3e7-9f4957dd8810)
+![Suites Payment report mySQL](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/1a84ed39-06fa-401e-837e-5d9dc51f0d6f)
 
-![Suites Payment report mySQL](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/3d02a830-4fe8-448d-9d43-c016b174de5f)
+![Suites Payment report mySQL](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/4d09cc39-25b8-45c4-b955-2715632c2a65)
 
 
 ### Отчет Allure c подключенным PostgreSQL
 Overview Report
-![Overview report PostgreSQL](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/9e7ff787-ffe4-4a7a-9f08-a73a86aa745d)
+![Overview report PostgreSQL](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/a6ec516c-b5bf-4116-9065-0f301a833c21)
 
 
 Suite CreditTest Report
-![Suites Credit report PostgreSQL](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/5c06d72a-49d4-428d-ab76-c39b053ebd7d)
+![Suites Credit report PostgreSQL](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/4c9b6afb-4d6a-4cba-96d5-810decd9b806)
 
-![Suites Credit report PostgreSQL](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/1d7790b0-e87d-4f12-a3a2-0376bf96dd61)
+![Suites Credit report PostgreSQL](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/0175c88d-d2d8-4aae-a282-7c4eab1a29ee)
 
 
 Suite PaymentTest Report
-![Suites Payment report PostgreSQL](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/8817c531-9065-4fa6-b418-7dbc7acaf8f3)
+![Suites Payment report PostgreSQL](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/ee42a699-f63d-4ea3-898f-b6763f4e9605)
 
-![Suites Payment report PostgreSQL](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/f40ee63d-0c14-49a7-95f4-e3dd1d092f3f)
+![Suites Payment report PostgreSQL](https://github.com/AleksandrrSavin/dp_qa/assets/122450661/c096941f-1a96-45d2-844b-ca37e3442ff1)
 
 ### Общие выводы:
 1. Автоматизация сократила время проходов по тестам в 4 раза. Выполнение автотестов занимает 12-15 минут. Выполнение ручных тестов заняло бы ориентировочно 1 час.

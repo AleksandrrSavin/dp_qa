@@ -1,5 +1,6 @@
 package org.example.data;
 
+import lombok.SneakyThrows;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
 
@@ -15,21 +16,24 @@ public class SQLService {
     public static String user = System.getProperty("dbUser");
     public static String password = System.getProperty("dbPassword");
 
-    public static String checkPaymentStatus() throws SQLException {
+    @SneakyThrows
+    public static String checkPaymentStatus() {
         QueryRunner qrunner = new QueryRunner();
         Connection connect = DriverManager.getConnection(url, user, password);
-        String status = "SELECT status FROM payment_entity";
+        String status = "SELECT status FROM payment_entity ORDER BY created DESC LIMIT 1";
         return qrunner.query(connect, status, new ScalarHandler<String>());
     }
 
-    public static String checkCreditStatus() throws SQLException {
+    @SneakyThrows
+    public static String checkCreditStatus() {
         QueryRunner qrunner = new QueryRunner();
         Connection connect = DriverManager.getConnection(url, user, password);
-        String status = "SELECT status FROM credit_request_entity";
+        String status = "SELECT status FROM credit_request_entity  ORDER BY created DESC LIMIT 1";
         return qrunner.query(connect, status, new ScalarHandler<String>());
     }
 
-    public static void clear() throws SQLException {
+    @SneakyThrows
+    public static void clear() {
         QueryRunner qrunner = new QueryRunner();
         Connection connect = DriverManager.getConnection(url, user, password);
         qrunner.update(connect, "DELETE FROM credit_request_entity");

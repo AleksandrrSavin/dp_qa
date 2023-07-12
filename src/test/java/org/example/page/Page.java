@@ -29,27 +29,27 @@ public class Page {
         $$(".heading_theme_alfa-on-white").find(exactText("Кредит по данным карты")).shouldBe(visible);
     }
 
-    public void success() {
+    public void waitSuccessfulNotification() {
         $$(".notification__title").find(exactText("Успешно")).shouldHave(visible, Duration.ofSeconds(25));
     }
 
-    public void error() {
+    public void waitErrorNotification() {
         $$(".notification__title").find(exactText("Ошибка")).shouldHave(visible, Duration.ofSeconds(25));
     }
 
-    public void invalidFormat() {
+    public void waitWrongFormatError() {
         $$(".input__sub").find(exactText("Неверный формат")).shouldBe(visible);
     }
 
-    public void invalidDate() {
+    public void waitCardExpirationDateError() {
         $$(".input__sub").find(exactText("Неверно указан срок действия карты")).shouldBe(visible);
     }
 
-    public void expiredCard() {
+    public void waitCardExpiredError() {
         $$(".input__sub").find(exactText("Истёк срок действия карты")).shouldBe(visible);
     }
 
-    public void required() {
+    public void waitRequiredFieldError() {
         $$(".input__sub").find(exactText("Поле обязательно для заполнения")).shouldBe(visible);
     }
 
